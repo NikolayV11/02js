@@ -7,6 +7,7 @@ const notes = [
   { title: "расказать теорию объектов", completed: true },
 ];
 
+// создаёт новые элементы в масив
 createBtn.onclick = function () {
   if (inputElement.value.length === 0) {
     return;
@@ -25,6 +26,8 @@ createBtn.onclick = function () {
   inputElement.value = "";
 };
 
+
+// генирирует дом 
 function getNoteTemplate(note, index) {
   return `<li
           class="list-group-item d-flex justify-content-between align-items-center"
@@ -41,6 +44,7 @@ function getNoteTemplate(note, index) {
         </li>`;
 }
 
+// выводит элементы
 function render() {
   listElement.innerHTML = "";
   for (let i = 0; i < notes.length; i++) {
